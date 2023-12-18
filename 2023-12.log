@@ -1,0 +1,17 @@
+2023/12/17 11:08:13.048283 Plugin para comunicación con impresoras térmicas 
+Proudly brought to you by Parzibyte
+
+Finalmente llegamos a la versión 3! espero que esta sea la última, por favor
+Nota: ya existe la versión para Android: https://parzibyte.me/blog/2022/11/01/plugin-gratuito-impresoras-termicas-bluetooth-android/
+No olvides leer mi blog si hay más actualizaciones o cosas interesantes:
+==========================================
+	https://parzibyte.me/blog
+========================================== 
+2023/12/17 11:08:13.048283 Escuchando en el puerto :8000.
+2023/12/17 11:08:40.467537 Error al consultar negocio por correo:
+"no such table: negocios"
+2023/12/17 11:08:40.468174 Error obteniendo negocio: no such table: negocios
+2023/12/17 11:27:26.101961 Dentro del ciclo para obtener un token no existente
+2023/12/17 11:28:20.650636 Al consultar un usuario por nombre, no hay filas
+2023/12/17 12:24:30.924768 Al consultar un usuario por nombre, no hay filas
+2023/12/17 12:24:43.232167 Al consultar un usuario por nombre, no hay filas

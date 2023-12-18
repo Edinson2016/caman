@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Caman Jeans | Punto de venta e Inventario</title>
+  <link rel="icon" href="./static/img/logo.png"><link href="./css/app.f9f6353ceec6dcc4c05f9c38aa75d7cd.css" rel="stylesheet">
+<style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style><style type="text/css" id="vuetify-theme-stylesheet">a { color: #1976d2; }
+.primary {
+background-color: #1976d2 !important;
+border-color: #1976d2 !important;
+}
+.primary--text {
+color: #1976d2 !important;
+caret-color: #1976d2 !important;
+}
+.primary.lighten-5 {
+background-color: #c7fdff !important;
+border-color: #c7fdff !important;
+}
+.primary--text.text--lighten-5 {
+color: #c7fdff !important;
+caret-color: #c7fdff !important;
+}
+.primary.lighten-4 {
+background-color: #a8e0ff !important;
+border-color: #a8e0ff !important;
+}
+.primary--text.text--lighten-4 {
+color: #a8e0ff !important;
+caret-color: #a8e0ff !important;
+}
+.primary.lighten-3 {
+background-color: #8ac5ff !important;
+border-color: #8ac5ff !important;
+}
+.primary--text.text--lighten-3 {
+color: #8ac5ff !important;
+caret-color: #8ac5ff !important;
+}
+.primary.lighten-2 {
+background-color: #6aaaff !important;
+border-color: #6aaaff !important;
+}
+.primary--text.text--lighten-2 {
+color: #6aaaff !important;
+caret-color: #6aaaff !important;
+}
+.primary.lighten-1 {
+background-color: #488fef !important;
+border-color: #488fef !important;
+}
+.primary--text.text--lighten-1 {
+color: #488fef !important;
+caret-color: #488fef !important;
+}
+.primary.darken-1 {
+background-color: #005eb6 !important;
+border-color: #005eb6 !important;
+}
+.primary--text.text--darken-1 {
+color: #005eb6 !important;
+caret-color: #005eb6 !important;
+}
+.primary.darken-2 {
+background-color: #00479b !important;
+border-color: #00479b !important;
+}
+.primary--text.text--darken-2 {
+color: #00479b !important;
+caret-color: #00479b !important;
+}
+.primary.darken-3 {
+background-color: #003180 !important;
+border-color: #003180 !important;
+}
+.primary--text.text--darken-3 {
+color: #003180 !important;
+caret-color: #003180 !important;
+}
+.primary.darken-4 {
+background-color: #001e67 !important;
+border-color: #001e67 !important;
+}
+.primary--text.text--darken-4 {
+color: #001e67 !important;
+caret-color: #001e67 !important;
+}
+.secondary {
+background-color: #424242 !important;
+border-color: #424242 !important;
+}
+.secondary--text {
+color: #424242 !important;
+caret-color: #424242 !important;
+}
+.secondary.lighten-5 {
+background-color: #c1c1c1 !important;
+border-color: #c1c1c1 !important;
+}
+.secondary--text.text--lighten-5 {
+color: #c1c1c1 !important;
+caret-color: #c1c1c1 !important;
+}
+.secondary.lighten-4 {
+background-color: #a6a6a6 !important;
+border-color: #a6a6a6 !important;
+}
+.secondary--text.text--lighten-4 {
+color: #a6a6a6 !important;
+caret-color: #a6a6a6 !important;
+}
+.secondary.lighten-3 {
+background-color: #8b8b8b !important;
+border-color: #8b8b8b !important;
+}
+.secondary--text.text--lighten-3 {
+color: #8b8b8b !important;
+caret-color: #8b8b8b !important;
+}
+.secondary.lighten-2 {
+background-color: #727272 !important;
+border-color: #727272 !important;
+}
+.secondary--text.text--lighten-2 {
+color: #727272 !important;
+caret-color: #727272 !important;
+}
+.secondary.lighten-1 {
+background-color: #595959 !important;
+border-color: #595959 !important;
+}
+.secondary--text.text--lighten-1 {
+color: #595959 !important;
+caret-color: #595959 !important;
+}
+.secondary.darken-1 {
+background-color: #2c2c2c !important;
+border-color: #2c2c2c !important;
+}
+.secondary--text.text--darken-1 {
+color: #2c2c2c !important;
+caret-color: #2c2c2c !important;
+}
+.secondary.darken-2 {
+background-color: #171717 !important;
+border-color: #171717 !important;
+}
+.secondary--text.text--darken-2 {
+color: #171717 !important;
+caret-color: #171717 !important;
+}
+.secondary.darken-3 {
+background-color: #000000 !important;
+border-color: #000000 !important;
+}
+.secondary--text.text--darken-3 {
+color: #000000 !important;
+caret-color: #000000 !important;
+}
+.secondary.darken-4 {
+background-color: #000000 !important;
+border-color: #000000 !important;
+}
+.secondary--text.text--darken-4 {
+color: #000000 !important;
+caret-color: #000000 !important;
+}
+.accent {
+background-color: #82b1ff !important;
+border-color: #82b1ff !important;
+}
+.accent--text {
+color: #82b1ff !important;
+caret-color: #82b1ff !important;
+}
+.accent.lighten-5 {
+background-color: #ffffff !important;
+border-color: #ffffff !important;
+}
+.accent--text.text--lighten-5 {
+color: #ffffff !important;
+caret-color: #ffffff !important;
+}
+.accent.lighten-4 {
+background-color: #f8ffff !important;
+border-color: #f8ffff !important;
+}
+.accent--text.text--lighten-4 {
+color: #f8ffff !important;
+caret-color: #f8ffff !important;
+}
+.accent.lighten-3 {
+background-color: #daffff !important;
+border-color: #daffff !important;
+}
+.accent--text.text--lighten-3 {
+color: #daffff !important;
+caret-color: #daffff !important;
+}
+.accent.lighten-2 {
+background-color: #bce8ff !important;
+border-color: #bce8ff !important;
+}
+.accent--text.text--lighten-2 {
+color: #bce8ff !important;
+caret-color: #bce8ff !important;
+}
+.accent.lighten-1 {
+background-color: #9fccff !important;
+border-color: #9fccff !important;
+}
+.accent--text.text--lighten-1 {
+color: #9fccff !important;
+caret-color: #9fccff !important;
+}
+.accent.darken-1 {
+background-color: #6596e2 !important;
+border-color: #6596e2 !important;
+}
+.accent--text.text--darken-1 {
+color: #6596e2 !important;
+caret-color: #6596e2 !important;
+}
+.accent.darken-2 {
+background-color: #467dc6 !important;
+border-color: #467dc6 !important;
+}
+.accent--text.text--darken-2 {
+color: #467dc6 !important;
+caret-color: #467dc6 !important;
+}
+.accent.darken-3 {
+background-color: #2364aa !important;
+border-color: #2364aa !important;
+}
+.accent--text.text--darken-3 {
+color: #2364aa !important;
+caret-color: #2364aa !important;
+}
+.accent.darken-4 {
+background-color: #004c90 !important;
+border-color: #004c90 !important;
+}
+.accent--text.text--darken-4 {
+color: #004c90 !important;
+caret-color: #004c90 !important;
+}
+.error {
+background-color: #ff5252 !important;
+border-color: #ff5252 !important;
+}
+.error--text {
+color: #ff5252 !important;
+caret-color: #ff5252 !important;
+}
+.error.lighten-5 {
+background-color: #ffe4d5 !important;
+border-color: #ffe4d5 !important;
+}
+.error--text.text--lighten-5 {
+color: #ffe4d5 !important;
+caret-color: #ffe4d5 !important;
+}
+.error.lighten-4 {
+background-color: #ffc6b9 !important;
+border-color: #ffc6b9 !important;
+}
+.error--text.text--lighten-4 {
+color: #ffc6b9 !important;
+caret-color: #ffc6b9 !important;
+}
+.error.lighten-3 {
+background-color: #ffa99e !important;
+border-color: #ffa99e !important;
+}
+.error--text.text--lighten-3 {
+color: #ffa99e !important;
+caret-color: #ffa99e !important;
+}
+.error.lighten-2 {
+background-color: #ff8c84 !important;
+border-color: #ff8c84 !important;
+}
+.error--text.text--lighten-2 {
+color: #ff8c84 !important;
+caret-color: #ff8c84 !important;
+}
+.error.lighten-1 {
+background-color: #ff6f6a !important;
+border-color: #ff6f6a !important;
+}
+.error--text.text--lighten-1 {
+color: #ff6f6a !important;
+caret-color: #ff6f6a !important;
+}
+.error.darken-1 {
+background-color: #df323b !important;
+border-color: #df323b !important;
+}
+.error--text.text--darken-1 {
+color: #df323b !important;
+caret-color: #df323b !important;
+}
+.error.darken-2 {
+background-color: #bf0025 !important;
+border-color: #bf0025 !important;
+}
+.error--text.text--darken-2 {
+color: #bf0025 !important;
+caret-color: #bf0025 !important;
+}
+.error.darken-3 {
+background-color: #9f0010 !important;
+border-color: #9f0010 !important;
+}
+.error--text.text--darken-3 {
+color: #9f0010 !important;
+caret-color: #9f0010 !important;
+}
+.error.darken-4 {
+background-color: #800000 !important;
+border-color: #800000 !important;
+}
+.error--text.text--darken-4 {
+color: #800000 !important;
+caret-color: #800000 !important;
+}
+.info {
+background-color: #2196f3 !important;
+border-color: #2196f3 !important;
+}
+.info--text {
+color: #2196f3 !important;
+caret-color: #2196f3 !important;
+}
+.info.lighten-5 {
+background-color: #d4ffff !important;
+border-color: #d4ffff !important;
+}
+.info--text.text--lighten-5 {
+color: #d4ffff !important;
+caret-color: #d4ffff !important;
+}
+.info.lighten-4 {
+background-color: #b5ffff !important;
+border-color: #b5ffff !important;
+}
+.info--text.text--lighten-4 {
+color: #b5ffff !important;
+caret-color: #b5ffff !important;
+}
+.info.lighten-3 {
+background-color: #95e8ff !important;
+border-color: #95e8ff !important;
+}
+.info--text.text--lighten-3 {
+color: #95e8ff !important;
+caret-color: #95e8ff !important;
+}
+.info.lighten-2 {
+background-color: #75ccff !important;
+border-color: #75ccff !important;
+}
+.info--text.text--lighten-2 {
+color: #75ccff !important;
+caret-color: #75ccff !important;
+}
+.info.lighten-1 {
+background-color: #51b0ff !important;
+border-color: #51b0ff !important;
+}
+.info--text.text--lighten-1 {
+color: #51b0ff !important;
+caret-color: #51b0ff !important;
+}
+.info.darken-1 {
+background-color: #007cd6 !important;
+border-color: #007cd6 !important;
+}
+.info--text.text--darken-1 {
+color: #007cd6 !important;
+caret-color: #007cd6 !important;
+}
+.info.darken-2 {
+background-color: #0064ba !important;
+border-color: #0064ba !important;
+}
+.info--text.text--darken-2 {
+color: #0064ba !important;
+caret-color: #0064ba !important;
+}
+.info.darken-3 {
+background-color: #004d9f !important;
+border-color: #004d9f !important;
+}
+.info--text.text--darken-3 {
+color: #004d9f !important;
+caret-color: #004d9f !important;
+}
+.info.darken-4 {
+background-color: #003784 !important;
+border-color: #003784 !important;
+}
+.info--text.text--darken-4 {
+color: #003784 !important;
+caret-color: #003784 !important;
+}
+.success {
+background-color: #4caf50 !important;
+border-color: #4caf50 !important;
+}
+.success--text {
+color: #4caf50 !important;
+caret-color: #4caf50 !important;
+}
+.success.lighten-5 {
+background-color: #dcffd6 !important;
+border-color: #dcffd6 !important;
+}
+.success--text.text--lighten-5 {
+color: #dcffd6 !important;
+caret-color: #dcffd6 !important;
+}
+.success.lighten-4 {
+background-color: #beffba !important;
+border-color: #beffba !important;
+}
+.success--text.text--lighten-4 {
+color: #beffba !important;
+caret-color: #beffba !important;
+}
+.success.lighten-3 {
+background-color: #a2ff9e !important;
+border-color: #a2ff9e !important;
+}
+.success--text.text--lighten-3 {
+color: #a2ff9e !important;
+caret-color: #a2ff9e !important;
+}
+.success.lighten-2 {
+background-color: #85e783 !important;
+border-color: #85e783 !important;
+}
+.success--text.text--lighten-2 {
+color: #85e783 !important;
+caret-color: #85e783 !important;
+}
+.success.lighten-1 {
+background-color: #69cb69 !important;
+border-color: #69cb69 !important;
+}
+.success--text.text--lighten-1 {
+color: #69cb69 !important;
+caret-color: #69cb69 !important;
+}
+.success.darken-1 {
+background-color: #2d9437 !important;
+border-color: #2d9437 !important;
+}
+.success--text.text--darken-1 {
+color: #2d9437 !important;
+caret-color: #2d9437 !important;
+}
+.success.darken-2 {
+background-color: #00791e !important;
+border-color: #00791e !important;
+}
+.success--text.text--darken-2 {
+color: #00791e !important;
+caret-color: #00791e !important;
+}
+.success.darken-3 {
+background-color: #006000 !important;
+border-color: #006000 !important;
+}
+.success--text.text--darken-3 {
+color: #006000 !important;
+caret-color: #006000 !important;
+}
+.success.darken-4 {
+background-color: #004700 !important;
+border-color: #004700 !important;
+}
+.success--text.text--darken-4 {
+color: #004700 !important;
+caret-color: #004700 !important;
+}
+.warning {
+background-color: #fb8c00 !important;
+border-color: #fb8c00 !important;
+}
+.warning--text {
+color: #fb8c00 !important;
+caret-color: #fb8c00 !important;
+}
+.warning.lighten-5 {
+background-color: #ffff9e !important;
+border-color: #ffff9e !important;
+}
+.warning--text.text--lighten-5 {
+color: #ffff9e !important;
+caret-color: #ffff9e !important;
+}
+.warning.lighten-4 {
+background-color: #fffb82 !important;
+border-color: #fffb82 !important;
+}
+.warning--text.text--lighten-4 {
+color: #fffb82 !important;
+caret-color: #fffb82 !important;
+}
+.warning.lighten-3 {
+background-color: #ffdf67 !important;
+border-color: #ffdf67 !important;
+}
+.warning--text.text--lighten-3 {
+color: #ffdf67 !important;
+caret-color: #ffdf67 !important;
+}
+.warning.lighten-2 {
+background-color: #ffc24b !important;
+border-color: #ffc24b !important;
+}
+.warning--text.text--lighten-2 {
+color: #ffc24b !important;
+caret-color: #ffc24b !important;
+}
+.warning.lighten-1 {
+background-color: #ffa72d !important;
+border-color: #ffa72d !important;
+}
+.warning--text.text--lighten-1 {
+color: #ffa72d !important;
+caret-color: #ffa72d !important;
+}
+.warning.darken-1 {
+background-color: #db7200 !important;
+border-color: #db7200 !important;
+}
+.warning--text.text--darken-1 {
+color: #db7200 !important;
+caret-color: #db7200 !important;
+}
+.warning.darken-2 {
+background-color: #bb5900 !important;
+border-color: #bb5900 !important;
+}
+.warning--text.text--darken-2 {
+color: #bb5900 !important;
+caret-color: #bb5900 !important;
+}
+.warning.darken-3 {
+background-color: #9d4000 !important;
+border-color: #9d4000 !important;
+}
+.warning--text.text--darken-3 {
+color: #9d4000 !important;
+caret-color: #9d4000 !important;
+}
+.warning.darken-4 {
+background-color: #802700 !important;
+border-color: #802700 !important;
+}
+.warning--text.text--darken-4 {
+color: #802700 !important;
+caret-color: #802700 !important;
+}</style></head>
+<body>
+  <div data-app="true" class="application theme--light" id="app"><div tabindex="-1" class="v-dialog__content" style="z-index: 0;"><div class="v-dialog v-dialog--persistent" style="max-width: 500px; display: none;"><div class="v-card v-sheet theme--light elevation-2"><div class="v-card__title headline">Permiso denegado</div> <div class="v-card__text"><h3>
+      Parece que no tienes permiso de estar en este lugar o de realizar la
+      acción que estabas a punto de hacer
+    </h3> <div class="v-alert error"><i aria-hidden="true" class="v-icon material-icons theme--light v-alert__icon">warning</i><div><strong>Número de permiso: </strong> <br> <strong>Descripción: </strong> <br> <br>
+      Si crees que deberías tener el permiso que se te ha denegado, pide a
+      un administrador que te lo conceda
+    </div></div> <p class="caption">
+      Nota: Si continúas, es posible que experimentes errores.<br>
+      De cualquier forma, este diálogo sólo es un aviso, ya que los
+      verdaderos permisos son verificados en el servidor por razones obvias.
+    </p></div> <div class="v-card__actions"><div class="spacer"></div> <button type="button" class="v-btn v-btn--flat theme--light gray--text"><div class="v-btn__content">OK</div></button></div></div></div></div><div class="application--wrap"><div class="v-dialog__container" style="display: block;"></div> <!----> <!----> <aside class="v-navigation-drawer v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" persistent="" enable-resize-watcher="" data-booted="true" style="height: 100%; margin-top: 0px; max-height: calc(100% + 0px); transform: translateX(-300px); width: 300px;"><div role="list" class="v-list hidden-print-only theme--light"><div class="layout row align-center"><div class="flex xs6"><div class="v-subheader theme--light"> Tienda </div></div></div> <div role="listitem"><a href="#/creditos" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__action"><i aria-hidden="true" class="v-icon material-icons theme--light">info</i></div> <div class="v-list__tile__content"><div class="v-list__tile__title">Ayuda</div></div></a></div> <div role="listitem"><a href="#/" class="primary--text v-list__tile--active v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__action"><i aria-hidden="true" class="v-icon material-icons theme--light">home</i></div> <div class="v-list__tile__content"><div class="v-list__tile__title">Inicio</div></div></a></div> <div role="listitem"><a href="#/escritorio" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__action"><i aria-hidden="true" class="v-icon material-icons theme--light">dashboard</i></div> <div class="v-list__tile__content"><div class="v-list__tile__title">Escritorio</div></div></a></div> <div role="listitem"><a href="#/inventario" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__action"><i aria-hidden="true" class="v-icon material-icons theme--light">store</i></div> <div class="v-list__tile__content"><div class="v-list__tile__title">Productos</div></div></a></div> <div role="listitem"><a href="#/vender" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__action"><i aria-hidden="true" class="v-icon material-icons theme--light">shopping_cart</i></div> <div class="v-list__tile__content"><div class="v-list__tile__title">Vender</div></div></a></div> <div role="listitem"><a href="#/clientes" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__action"><i aria-hidden="true" class="v-icon material-icons theme--light">people</i></div> <div class="v-list__tile__content"><div class="v-list__tile__title">Clientes</div></div></a></div> <div role="listitem"><a href="#/caja" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__action"><i aria-hidden="true" class="v-icon material-icons theme--light">inbox</i></div> <div class="v-list__tile__content"><div class="v-list__tile__title">Caja</div></div></a></div> <div class="v-list__group"><div class="v-list__group__header"><div class="v-list__group__header__prepend-icon"><i aria-hidden="true" class="v-icon material-icons theme--light">collections_bookmark</i></div><div role="listitem"><div class="v-list__tile theme--light"><div class="v-list__tile__title">Reportes</div></div></div><div class="v-list__group__header__append-icon"><i aria-hidden="true" class="v-icon material-icons theme--light">keyboard_arrow_down</i></div></div><div class="v-list__group__items" style="display: none;"> <div role="listitem"><a href="#/reporte/ventas/contado" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__title">Ventas al contado</div></a></div> <div role="listitem"><a href="#/reporte/apartados" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__title">Apartados</div></a></div> <div role="listitem"><a href="#/reporte/caja" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__title">Caja</div></a></div> <div role="listitem"><a href="#/reporte/stock" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__title">Productos con baja existencia</div></a></div> <div role="listitem"><a href="#/reporte/inventario" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__title">Inventario</div></a></div></div></div> <div role="listitem"><a href="#/graficas" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__action"><i aria-hidden="true" class="v-icon material-icons theme--light">bar_chart</i></div> <div class="v-list__tile__content"><div class="v-list__tile__title">Gráficas y estadísticas</div></div></a></div> <div role="listitem"><a href="#/usuarios" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__action"><i aria-hidden="true" class="v-icon material-icons theme--light">verified_user</i></div> <div class="v-list__tile__content"><div class="v-list__tile__title">Usuarios</div></div></a></div> <div class="v-list__group"><div class="v-list__group__header"><div class="v-list__group__header__prepend-icon"><i aria-hidden="true" class="v-icon material-icons theme--light">add</i></div><div role="listitem"><div class="v-list__tile theme--light"><div class="v-list__tile__title">Más</div></div></div><div class="v-list__group__header__append-icon"><i aria-hidden="true" class="v-icon material-icons theme--light">keyboard_arrow_down</i></div></div><div class="v-list__group__items" style="display: none;"> <div role="listitem"><a href="#/hacer/inventario" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__title">Hacer inventario</div></a></div> <div role="listitem"><a href="#/imprimir/codigos" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__title">Imprimir códigos de barras</div></a></div> <div role="listitem"><a href="#/ajustes" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__title">Ajustes</div></a></div> <div role="listitem"><a href="#/creditos" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__title">Ayuda</div></a></div> <div role="listitem"><a href="#/logout" class="v-list__tile v-list__tile--link theme--light" router=""><div class="v-list__tile__title">Salir</div></a></div></div></div></div><div class="v-navigation-drawer__border"></div></aside> <nav class="hidden-print-only v-toolbar v-toolbar--fixed theme--light white" data-booted="true" style="margin-top: 0px; padding-right: 0px; padding-left: 0px; transform: translateY(0px);"><div class="v-toolbar__content" style="height: 48px;"><button type="button" class="v-toolbar__side-icon v-btn v-btn--icon theme--light"><div class="v-btn__content"><i aria-hidden="true" class="v-icon material-icons theme--light">menu</i></div></button> <div class="v-toolbar__title"><span class="title hidden-sm-and-down">Caman Jeans</span> <span class="body-2 hidden-sm-and-down" style="">-</span> <span class="body-2">Inicio</span></div> <div class="spacer"></div> <div class="v-toolbar__items hidden-sm-and-down"><span class="title hidden-sm-and-down" style="align-self: center;">
+      Hola, Caman Jeans
+      <i aria-hidden="true" class="v-icon material-icons theme--light black--text">sentiment_very_satisfied</i></span></div></div></nav> <main class="v-content fondo-blanco" data-booted="true" style="padding: 48px 0px 32px;"><div class="v-content__wrap"><div class="container fondo-blanco fluid"><div data-v-40ebb345="" class="container grid-list-lg fluid"><!----> <div data-v-40ebb345="" class="layout row wrap fill-height"><div data-v-40ebb345="" class="flex xs12"><h1 data-v-40ebb345="" class="display-3 text-xs-center">Bienvenido. Elija una opción</h1> <p data-v-40ebb345="">
+      Recuerde que siempre puede explorar el menú completo haciendo click en
+      la parte superior izquierda
+    </p></div> <div data-v-40ebb345="" class="flex xs12"><div data-v-40ebb345="" class="v-alert success"><i aria-hidden="true" class="v-icon material-icons theme--light v-alert__icon">check_circle</i><div><p><strong>Caman Jeans</strong> - Punto de venta e Inventario
+    </small></p></div></div></div> <div data-v-40ebb345="" class="flex xs12 sm6 md3 lg2"><div data-v-40ebb345="" class="cursor-manita text-xs-center v-card v-sheet theme--light elevation-2" style="min-height: 250px;"><div data-v-40ebb345="" class="v-responsive v-image text-xs-center" style="height: 200px; max-height: 100px; width: 100px; margin: auto;"><div class="v-responsive__sizer" style="padding-bottom: 100%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;http://localhost:2106/static/img/bolsa-de-la-compra.8aefc13.png&quot;); background-position: center center;"></div><div class="v-responsive__content"></div></div> <div data-v-40ebb345="" class="v-card__title v-card__title--primary"><div data-v-40ebb345=""><div data-v-40ebb345="" class="headline">Realizar una venta</div> <span data-v-40ebb345="" class="grey--text">Hacer una venta al contado o un apartado</span></div></div></div></div> <div data-v-40ebb345="" class="flex xs12 sm6 md3 lg2"><div data-v-40ebb345="" class="cursor-manita text-xs-center v-card v-sheet theme--light elevation-2" style="min-height: 250px;"><div data-v-40ebb345="" class="v-responsive v-image text-xs-center" style="height: 200px; max-height: 100px; width: 100px; margin: auto;"><div class="v-responsive__sizer" style="padding-bottom: 100%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;http://localhost:2106/static/img/que-hacer.c1d47a0.png&quot;); background-position: center center;"></div><div class="v-responsive__content"></div></div> <div data-v-40ebb345="" class="v-card__title v-card__title--primary"><div data-v-40ebb345=""><div data-v-40ebb345="" class="headline">Ver inventario</div> <span data-v-40ebb345="" class="grey--text">Registrar, eliminar o actualizar detalles productos</span></div></div></div></div> <div data-v-40ebb345="" class="flex xs12 sm6 md3 lg2"><div data-v-40ebb345="" class="cursor-manita text-xs-center v-card v-sheet theme--light elevation-2" style="min-height: 250px;"><div data-v-40ebb345="" class="v-responsive v-image text-xs-center" style="height: 200px; max-height: 100px; width: 100px; margin: auto;"><div class="v-responsive__sizer" style="padding-bottom: 100%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;http://localhost:2106/static/img/red.524a30a.png&quot;); background-position: center center;"></div><div class="v-responsive__content"></div></div> <div data-v-40ebb345="" class="v-card__title v-card__title--primary"><div data-v-40ebb345=""><div data-v-40ebb345="" class="headline">Mis clientes</div> <span data-v-40ebb345="" class="grey--text">Registrar, eliminar o actualizar detalles clientes</span></div></div></div></div> <div data-v-40ebb345="" class="flex xs12 sm6 md3 lg2"><div data-v-40ebb345="" class="cursor-manita text-xs-center v-card v-sheet theme--light elevation-2" style="min-height: 250px;"><div data-v-40ebb345="" class="v-responsive v-image text-xs-center" style="height: 200px; max-height: 100px; width: 100px; margin: auto;"><div class="v-responsive__sizer" style="padding-bottom: 100%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;http://localhost:2106/static/img/dinero.280fff4.png&quot;); background-position: center center;"></div><div class="v-responsive__content"></div></div> <div data-v-40ebb345="" class="v-card__title v-card__title--primary"><div data-v-40ebb345=""><div data-v-40ebb345="" class="headline">Abonos</div> <span data-v-40ebb345="" class="grey--text">Registrar o ver abonos de un apartado</span></div></div></div></div> <div data-v-40ebb345="" class="flex xs12 sm6 md3 lg2"><div data-v-40ebb345="" class="cursor-manita text-xs-center v-card v-sheet theme--light elevation-2" style="min-height: 250px;"><div data-v-40ebb345="" class="v-responsive v-image text-xs-center" style="height: 200px; max-height: 100px; width: 100px; margin: auto;"><div class="v-responsive__sizer" style="padding-bottom: 100%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;http://localhost:2106/static/img/monedas.cc6526e.png&quot;); background-position: center center;"></div><div class="v-responsive__content"></div></div> <div data-v-40ebb345="" class="v-card__title v-card__title--primary"><div data-v-40ebb345=""><div data-v-40ebb345="" class="headline">Caja</div> <span data-v-40ebb345="" class="grey--text">Registrar una salida o entrada de efectivo</span></div></div></div></div> <div data-v-40ebb345="" class="flex xs12 sm6 md3 lg2"><div data-v-40ebb345="" class="cursor-manita text-xs-center v-card v-sheet theme--light elevation-2" style="min-height: 250px;"><div data-v-40ebb345="" class="v-responsive v-image text-xs-center" style="height: 200px; max-height: 100px; width: 100px; margin: auto;"><div class="v-responsive__sizer" style="padding-bottom: 100%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;http://localhost:2106/static/img/salpicadero.f66d1ab.png&quot;); background-position: center center;"></div><div class="v-responsive__content"></div></div> <div data-v-40ebb345="" class="v-card__title v-card__title--primary"><div data-v-40ebb345=""><div data-v-40ebb345="" class="headline">Escritorio</div> <span data-v-40ebb345="" class="grey--text">Resumen de todos los movimientos de su tienda</span></div></div></div></div> <div data-v-40ebb345="" class="flex xs12 sm6 md3 lg2"><div data-v-40ebb345="" class="cursor-manita text-xs-center v-card v-sheet theme--light elevation-2" style="min-height: 250px;"><div data-v-40ebb345="" class="v-responsive v-image text-xs-center" style="height: 200px; max-height: 100px; width: 100px; margin: auto;"><div class="v-responsive__sizer" style="padding-bottom: 100%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;http://localhost:2106/static/img/estadistica.d676772.png&quot;); background-position: center center;"></div><div class="v-responsive__content"></div></div> <div data-v-40ebb345="" class="v-card__title v-card__title--primary"><div data-v-40ebb345=""><div data-v-40ebb345="" class="headline">Gráficas</div> <span data-v-40ebb345="" class="grey--text">Compare ventas, vea los productos más vendidos y mucho
+            más</span></div></div></div></div> <div data-v-40ebb345="" class="flex xs12 sm6 md3 lg2"><div data-v-40ebb345="" class="text-xs-center v-card v-sheet theme--light elevation-2" style="min-height: 250px;"><div data-v-40ebb345="" class="v-responsive v-image text-xs-center" style="height: 200px; max-height: 100px; width: 100px; margin: auto;"><div class="v-responsive__sizer" style="padding-bottom: 100%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;http://localhost:2106/static/img/tareas.ecd565c.png&quot;); background-position: center center;"></div><div class="v-responsive__content"></div></div> <div data-v-40ebb345="" class="v-card__title v-card__title--primary"><div data-v-40ebb345=""><div data-v-40ebb345="" class="headline">Reportes</div> <span data-v-40ebb345="" class="grey--text">Ver el <a data-v-40ebb345="">reporte de caja</a>, de
+            <a data-v-40ebb345="">ventas al contado</a> o
+            de <a data-v-40ebb345="">apartados</a></span></div></div></div></div> <div data-v-40ebb345="" class="flex xs12 sm6 md3 lg2"><div data-v-40ebb345="" class="cursor-manita text-xs-center v-card v-sheet theme--light elevation-2" style="min-height: 250px;"><div data-v-40ebb345="" class="v-responsive v-image text-xs-center" style="height: 200px; max-height: 100px; width: 100px; margin: auto;"><div class="v-responsive__sizer" style="padding-bottom: 100%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;http://localhost:2106/static/img/escudo.2db8426.png&quot;); background-position: center center;"></div><div class="v-responsive__content"></div></div> <div data-v-40ebb345="" class="v-card__title v-card__title--primary"><div data-v-40ebb345=""><div data-v-40ebb345="" class="headline">Usuarios</div> <span data-v-40ebb345="" class="grey--text">Administrar usuarios (o cajeros) así como sus permisos</span></div></div></div></div> <div data-v-40ebb345="" class="flex xs12 sm6 md3 lg2"><div data-v-40ebb345="" class="cursor-manita text-xs-center v-card v-sheet theme--light elevation-2" style="min-height: 250px;"><div data-v-40ebb345="" class="v-responsive v-image text-xs-center" style="height: 200px; max-height: 100px; width: 100px; margin: auto;"><div class="v-responsive__sizer" style="padding-bottom: 100%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;data:image/png;base64,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&quot;); background-position: center center;"></div><div class="v-responsive__content"></div></div> <div data-v-40ebb345="" class="v-card__title v-card__title--primary"><div data-v-40ebb345=""><div data-v-40ebb345="" class="headline">Códigos de barras</div> <span data-v-40ebb345="" class="grey--text">Imprimir códigos de barras de productos</span></div></div></div></div> <div data-v-40ebb345="" class="flex xs12 sm6 md3 lg2"><div data-v-40ebb345="" class="cursor-manita text-xs-center v-card v-sheet theme--light elevation-2" style="min-height: 250px;"><div data-v-40ebb345="" class="v-responsive v-image text-xs-center" style="height: 200px; max-height: 100px; width: 100px; margin: auto;"><div class="v-responsive__sizer" style="padding-bottom: 100%;"></div><div class="v-image__image v-image__image--cover" style="background-image: url(&quot;http://localhost:2106/static/img/ajustes.06556a3.png&quot;); background-position: center center;"></div><div class="v-responsive__content"></div></div> <div data-v-40ebb345="" class="v-card__title v-card__title--primary"><div data-v-40ebb345=""><div data-v-40ebb345="" class="headline">Ajustes</div> <span data-v-40ebb345="" class="grey--text">Cambiar los datos de su tienda, configurar la impresora,
+            etcétera</span></div></div></div></div></div></div></div></div></main> <footer class="v-footer fondo-blanco hidden-print-only v-footer--fixed theme--light" style="height: 32px; min-height: 3rem;"><span><strong>Caman Jeans - Punto de venta e Inventario</strong> 
+  </span></footer></div></div>
+  <script type="text/javascript" src="./js/manifest.5ebdb86dbeef19313db4.js"></script>
+  <script type="text/javascript" src="./js/vendor.87f4a8280946109714ca.js"></script>
+  <script type="text/javascript" src="./js/app.c81beaa98867a89b99c8.js"></script>
+
+</body></html>
